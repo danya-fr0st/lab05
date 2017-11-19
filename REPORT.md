@@ -158,6 +158,9 @@ Description: ???
 
 danya-fr0st/lab10 (active: yes, admin: yes, push: yes, pull: yes)
 Description: ???
+danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis enable
+danya-fr0st/lab05: enabled :)
+
 
 
 ```
