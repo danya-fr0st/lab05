@@ -87,9 +87,9 @@ $ travis accounts #Отображаем аккаунт
 $ travis sync #Синхронизируемся
 $ travis repos #Отображаем, какие репозитории доступны, а какие нет
 $ travis enable #Подключаем проект
-$ travis whatsup #Отоброжаем, что изменилось в проекте
-$ travis branches #Отоброжаем обновленную версию проекта
-$ travis history #Отоброжаем историю проекта
+$ travis whatsup #Отображаем, что изменилось в проекте
+$ travis branches #Отображаем обновленную версию проекта
+$ travis history #Отображаем историю проекта
 $ travis show #Отображаем проект
 danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis whatsup
 danya-fr0st/lab05 passed: #1
