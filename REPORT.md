@@ -25,12 +25,13 @@ $ open https://travis-ci.org
 $ export GITHUB_USERNAME=danya-fr0st
 $ export GITHUB_TOKEN=<полученный_токен>
 ```
-Клонируем lab04 в lab05, переходим в lab05
+```
+Клонируем lab04 в Lab05, переходим в Lab05
 ```ShellSession
-$ git clone https://github.com/${GITHUB_USERNAME}/lab04 lab05 #Клонируем
-$ cd lab05 #Переходим в lab05
+$ git clone https://github.com/${GITHUB_USERNAME}/lab04 Lab05 #Клонируем
+$ cd Lab05 #Переходим в Lab05
 $ git remote remove origin 
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab05 #Соединяем с репозиторием на сервере
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/Lab05 #Соединяем с репозиторием на сервере
 ```
 Создаем .travis.yml и заполняем его
 ```ShellSession
@@ -69,9 +70,9 @@ $ travis login --github-token ${GITHUB_TOKEN}
 ```ShellSession
 $ travis lint
 ```
-Вставляем значок markdown
+Вставляем значок 
 ```ShellSession
-$ ex -sc '[![Build Status](https://travis-ci.org/danya-fr0st/lab05.svg?branch=master)](https://travis-ci.org/danya-fr0st/lab05)' -cx REPORT.md
+$ex -sc '1i|[![Build Status](https://travis-ci.org/anasteyshakoshman/Lab05.svg?branch=master)](https://travis-ci.org/anasteyshakoshman/Lab05)' -cx README.md
 ```
 Выкладываем всё в репозиторий  
 ```ShellSession
@@ -87,82 +88,10 @@ $ travis accounts #Отображаем аккаунт
 $ travis sync #Синхронизируемся
 $ travis repos #Отображаем, какие репозитории доступны, а какие нет
 $ travis enable #Подключаем проект
-$ travis whatsup #Отображаем, что изменилось в проекте
-$ travis branches #Отображаем обновленную версию проекта
-$ travis history #Отображаем историю проекта
+$ travis whatsup #Отоброжаем, что изменилось в проекте
+$ travis branches #Отоброжаем обновленную версию проекта
+$ travis history #Отоброжаем историю проекта
 $ travis show #Отображаем проект
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis whatsup
-danya-fr0st/lab05 passed: #1
-danya-fr0st/lab10 passed: #7
-danya-fr0st/lab08 failed: #6
-danya-fr0st/lab06 passed: #13
-danya-fr0st/lab05- failed: #1
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis branches
-master:  #1    passed     added CI
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis history
-#1 passed:       master added CI
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis show
-Job #1.1:  added CI
-State:         passed
-Type:          push
-Branch:        master
-Compare URL:   https://github.com/danya-fr0st/lab05/compare/5137146b8f65^...343b630a467e
-Duration:      54 sec
-Started:       2017-11-19 16:24:47
-Finished:      2017-11-19 16:25:41
-Allow Failure: false
-Config:        os: linux
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis lint
-Warnings for .travis.yml:
-[x] value for addons section is empty, dropping
-[x] in addons section: unexpected key apt, dropping
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis repos
-danya-fr0st/3_Sem (active: yes, admin: yes, push: yes, pull: yes)
-Description: 3 семестр, АЯП
-
-danya-fr0st/BMSTU_2_Sem (active: no, admin: yes, push: yes, pull: yes)
-Description: Лабы, дз, etc
-
-danya-fr0st/BMSTU_2_Sem_-TMP- (active: no, admin: yes, push: yes, pull: yes)
-Description: Технологии и методы программирования (дз и лабы)
-
-danya-fr0st/Course-Project (active: no, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/TZoo (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab03 (active: no, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab04 (active: no, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab05 (active: yes, admin: yes, push: yes, pull: yes)
-Description: debt TRAVIS CI lab, 19.11.2017
-
-danya-fr0st/lab05- (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab06 (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab07 (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab08 (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab09 (active: no, admin: yes, push: yes, pull: yes)
-Description: ???
-
-danya-fr0st/lab10 (active: yes, admin: yes, push: yes, pull: yes)
-Description: ???
-danya-fr0st@danyafr0st-VirtualBox:~/projects/lab05$ travis enable
-danya-fr0st/lab05: enabled :)
-
-
-
 ```
 
 ## Report
@@ -170,12 +99,12 @@ danya-fr0st/lab05: enabled :)
 ```ShellSession
 $ cd ~/workspace/labs/
 $ export LAB_NUMBER=05
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
+$ git clone https://github.com/tp-labs/Lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
+$ mkdir reports/Lab${LAB_NUMBER}
+$ cp tasks/Lab${LAB_NUMBER}/README.md reports/Lab${LAB_NUMBER}/REPORT.md
+$ cd reports/Lab${LAB_NUMBER}
 $ edit REPORT.md
-$ gistup -m "lab${LAB_NUMBER}"
+$ gistup -m "Lab${LAB_NUMBER}"
 ```
 
 ## Links
